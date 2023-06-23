@@ -1,6 +1,9 @@
 # polymers_ReaxFF
 
-to run place2
+to run place2 or xtob
 
-chmod +x place2
-./place2
+chmod +x place2 or xtob
+
+then
+
+./place2 ot ./xtob
