@@ -2,7 +2,7 @@ STEP 1 : Generate box of polymers
 --------------------------------------------------
 File: ~/work/ALP/place/1_box_of_polymers/control 
 --------------------------------------------------
-  125           ! Number of duplicates molecule to be put in periodic box
+  124           ! Number of duplicates molecule to be put in periodic box
  35.00          ! Unit cell parameter a1 of periodic box  (Angstrom)
  35.00          ! Unit cell parameter b1 of periodic box (Angstrom)
 180.00          ! Unit cell parameter c1 of periodic box (Angstrom)
@@ -10,14 +10,14 @@ File: ~/work/ALP/place/1_box_of_polymers/control
  90.00          ! Unit cell parameter beta of periodic box
  90.00          ! Unit cell parameter gamma of periodic box
  3.00           ! Minimum distance between molecules allowed (Angstrom)
-  0             ! Read in (1) from geo2
+  1             ! Read in (1) from geo2
   0             ! (0) leave geo2-structure were it is (1) put geo2-structure in$
 50000           ! Number of non-succesful random placement steps allowed; aft
  1553           ! Seed for random generator
 
 - - - - - - - - - - - - - - - - - - - - - - -
 cp single_polymer.xyz geo 
- ** note: no geo2 file!
+cp single_polymer.xyz geo2 
 ./place2
 - - - - - - - - - - - - - - - - - - - - - - -
 
