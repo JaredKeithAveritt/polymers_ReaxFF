@@ -54,6 +54,14 @@ cat 2L.xyz polymers.xyz > combined.xyz
 nano combined.xyz ** change the number of atoms and delete the space at the middle of the file
 - - - - - - - - - - - - - - - - - - - - - - -
 
+STEP 4 : create input file (geo) using xtob
+- - - - - - - - - - - - - - - - - - - - - - -
+cd xtob
+cp ../combined.xyz system_name.xyz
+./xtob
+cp ..fort.15 geo
+
+
 
 
 
