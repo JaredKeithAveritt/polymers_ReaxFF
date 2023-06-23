@@ -1,0 +1,7 @@
+Margret ran steps 1-3 (see work/PMMA) 
+1_min (till ?)
+2_eq_nvt (till ?? ) 
+3__deform_300K (till ??? )
+4_npt_300K (till convergence)
+5_rm_2L_npt_300K (till convergence)
+6_npt_heating ? 
