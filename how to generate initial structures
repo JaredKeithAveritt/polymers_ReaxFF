@@ -14,7 +14,7 @@ File: ~/work/ALP/place/1_box_of_polymers/control
   0             ! (0) leave geo2-structure were it is (1) put geo2-structure in$
 50000           ! Number of non-succesful random placement steps allowed; aft
  1553           ! Seed for random generator
-
+** note, put 1 less duplicates in the first line of the control file!
 - - - - - - - - - - - - - - - - - - - - - - -
 cp single_polymer.xyz geo 
 cp single_polymer.xyz geo2 
