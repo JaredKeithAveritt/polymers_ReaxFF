@@ -6,4 +6,4 @@ chmod +x place2 or xtob
 
 then
 
-./place2 ot ./xtob
+./place2 or ./xtob
