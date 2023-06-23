@@ -23,12 +23,6 @@ cp single_polymer.xyz geo2
 
 STEP 2 : Center box of polymers 
 --------------------------------------------------
-File: ~/work/ALP/place/2_center_polymers/temp.xyz
---------------------------------------------------
-1
-
-X 1 1 1
---------------------------------------------------
 File: ~/work/ALP/place/2_center_polymers/control 
 --------------------------------------------------
    1            ! Number of duplicates molecule to be put in periodic box
@@ -52,7 +46,7 @@ cp temp.xyz geo
 nano output.xyz ** delete the temp atom X from the output.xyz and change the number of atoms in the file
 - - - - - - - - - - - - - - - - - - - - - - -
 
-STEP 2 : Put graphene 2L and polymer box together
+STEP 3 : Put graphene 2L and polymer box together
 - - - - - - - - - - - - - - - - - - - - - - -
 cp ../2_center_polymers/output.xyz polymers.xyz
 cp ../2L.xyz 2L.xyz
