@@ -1,0 +1,74 @@
+STEP 1 : Generate box of polymers 
+--------------------------------------------------
+File: ~/work/ALP/place/1_box_of_polymers/control 
+--------------------------------------------------
+  125           ! Number of duplicates molecule to be put in periodic box
+ 35.00          ! Unit cell parameter a1 of periodic box  (Angstrom)
+ 35.00          ! Unit cell parameter b1 of periodic box (Angstrom)
+180.00          ! Unit cell parameter c1 of periodic box (Angstrom)
+ 90.00          ! Unit cell parameter alfa of periodic box
+ 90.00          ! Unit cell parameter beta of periodic box
+ 90.00          ! Unit cell parameter gamma of periodic box
+ 3.00           ! Minimum distance between molecules allowed (Angstrom)
+  0             ! Read in (1) from geo2
+  0             ! (0) leave geo2-structure were it is (1) put geo2-structure in$
+50000           ! Number of non-succesful random placement steps allowed; aft
+ 1553           ! Seed for random generator
+
+- - - - - - - - - - - - - - - - - - - - - - -
+cp single_polymer.xyz geo 
+ ** note: no geo2 file!
+./place2
+- - - - - - - - - - - - - - - - - - - - - - -
+
+STEP 2 : Center box of polymers 
+--------------------------------------------------
+File: ~/work/ALP/place/2_center_polymers/temp.xyz
+--------------------------------------------------
+1
+
+X 1 1 1
+--------------------------------------------------
+File: ~/work/ALP/place/2_center_polymers/control 
+--------------------------------------------------
+   1            ! Number of duplicates molecule to be put in periodic box
+ 41.80          ! Unit cell parameter a1 of periodic box  (Angstrom)
+ 42.62          ! Unit cell parameter b1 of periodic box (Angstrom)
+ 210.0          ! Unit cell parameter c1 of periodic box (Angstrom)
+ 90.00          ! Unit cell parameter alfa of periodic box
+ 90.00          ! Unit cell parameter beta of periodic box
+ 90.00          ! Unit cell parameter gamma of periodic box
+ 3.00           ! Minimum distance between molecules allowed (Angstrom)
+  1             ! Read in (1) from geo2
+  1             ! (0) leave geo2-structure were it is (1) put geo2-structure in$
+50000           ! Number of non-succesful random placement steps allowed; aft
+ 1553           ! Seed for random generator
+
+- - - - - - - - - - - - - - - - - - - - - - -
+cp ../1_box_of_polymers/output.xyz alps.xyz
+cp polymers.xyz geo
+cp temp.xyz geo2
+./place2
+nano output.xyz ** delete the temp atom X from the output.xyz and change the number of atoms in the file
+- - - - - - - - - - - - - - - - - - - - - - -
+
+STEP 2 : Put graphene 2L and polymer box together
+- - - - - - - - - - - - - - - - - - - - - - -
+cp ../2_center_polymers/output.xyz alps.xyz
+cp ../2L.xyz 2L.xyz
+cat 2L.xyz polymers.xyz > combined.xyz
+- - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
