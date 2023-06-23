@@ -45,18 +45,19 @@ File: ~/work/ALP/place/2_center_polymers/control
  1553           ! Seed for random generator
 
 - - - - - - - - - - - - - - - - - - - - - - -
-cp ../1_box_of_polymers/output.xyz alps.xyz
-cp polymers.xyz geo
-cp temp.xyz geo2
+cp ../1_box_of_polymers/output.xyz polymers.xyz
+cp polymers.xyz geo2
+cp temp.xyz geo
 ./place2
 nano output.xyz ** delete the temp atom X from the output.xyz and change the number of atoms in the file
 - - - - - - - - - - - - - - - - - - - - - - -
 
 STEP 2 : Put graphene 2L and polymer box together
 - - - - - - - - - - - - - - - - - - - - - - -
-cp ../2_center_polymers/output.xyz alps.xyz
+cp ../2_center_polymers/output.xyz polymers.xyz
 cp ../2L.xyz 2L.xyz
 cat 2L.xyz polymers.xyz > combined.xyz
+nano combined.xyz ** change the number of atoms and delete the space at the middle of the file
 - - - - - - - - - - - - - - - - - - - - - - -
 
 
