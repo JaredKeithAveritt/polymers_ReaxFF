@@ -1,0 +1,36 @@
+In the directory min:
+energylog
+summary.txt
+dipole.out
+xmolout
+
+In the directory eq_nvt:
+initial_vmd.xyz
+output.pdb
+
+In the directory deform_300K:
+moldyn.vel
+vels
+vregime.in
+
+In the directory npt_300K:
+moldyn.vel
+molsav-0002
+molsav
+reaxout.kf
+molsav-0001
+thermolog
+
+In the directory rm_1L_npt_300K:
+energylog
+molsav-0001
+reaxout.kf
+molsav
+output.pdb
+thermolog
+control.save.1
+
+In the directory npt_heat:
+energylog
+summary.txt
+tregime.in
